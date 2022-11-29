@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper>
+    <select id="findOneGroup" resultType="com.group/domain/Group.java">
+        "SELECT * FROM allGroup WHERE groupNumber=#{groupNumber} and groupPin=#{groupPin}"
+    </select>
+
+    <update id="updateGroupName" parameterType="java.lang.Integer,java.lang.String">
+        "UPDATE allGroup set groupPin=#{groupPin} WHERE groupNumber=#{groupNumber}"
+    </update>
+
+<!--    <select id="findOneByName" resultType="com.login/domain/User.java">-->
+<!--        "SELECT * FROM user WHERE username=#{username}"-->
+<!--    </select>-->
+
+    <insert id="insertOne" parameterType="java.lang.Integer,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String">
+        "insert into allGroup values(#{groupNumber},#{groupName},#{groupPin},#{groupManager},#{createTime})"
+    </insert>
+</mapper>
