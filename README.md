@@ -1,5 +1,5 @@
 # GOLL
-This is a mobile app which facilitates the organization of group activities.
+This is a mobile app which facilitates the organization of group activities, using React Native and Java Springboot.
 
 ## Features:
 • Users can create groups and join existing groups with a unique group number  
